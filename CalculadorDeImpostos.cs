@@ -12,14 +12,14 @@ namespace CursoDesignPatterns
             switch (tipoImposto)
             {
                 case TipoImposto.ICMS:
-                {
-                    double icms = orcamento.Valor * 0.1;
+                {                    
+                    var icms = new ICMS().CalculaICMS(orcamento);
                     Console.WriteLine(icms);
                     break;
                 }
                 case TipoImposto.ISS:
                 {
-                    double iss = orcamento.Valor * 0.06;
+                    var iss = new ISS().CalculaISS(orcamento);
                     Console.WriteLine(iss);
                     break;
                 }

@@ -5,10 +5,10 @@ namespace CursoDesignPatterns
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            var orcamento = new Orcamento(10);
             var calculador = new CalculadorDeImpostos();
-            calculador.RealizaCalculo(new Orcamento(10), TipoImposto.ICMS);
-            calculador.RealizaCalculo(new Orcamento(10), TipoImposto.ISS);
+            calculador.RealizaCalculo(orcamento, TipoImposto.ICMS);
+            calculador.RealizaCalculo(orcamento, TipoImposto.ISS);
 
             Console.ReadKey();
         }
